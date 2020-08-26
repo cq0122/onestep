@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加载不同css文件</title>
+
+    <link rel="stylesheet" href="./a.css" />
+  </head>
+  <body>
+    <input type="button" onclick="changeTheme()" value="更改主题" />
+    <div class="content">
+      <p class="content-text">测试文本1</p>
+      <p class="content-text">测试文本2</p>
+      <p class="content-text">测试文本3</p>
+      <p class="content-text">测试文本4</p>
+    </div>
+    <script>
+      var flag = true;
+      function changeTheme() {
+        var ele = document.createElement("link");
+        ele.rel = "stylesheet";
+        ele.href = flag ? "./b.css" : "./a.css";
+        var headEl = document.getElementsByTagName("head")[0];
+        var linkEl = headEl.getElementsByTagName("link")[0];
+        headEl.removeChild(linkEl);
+        headEl.appendChild(ele);
+        flag = !flag;
+      }
+    </script>
+  </body>
+</html>

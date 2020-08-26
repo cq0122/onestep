@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>less修改变量</title>
+
+    <link rel="stylesheet/less" type="text/css" href="./index.less" />
+    <script src="./less.js"></script>
+  </head>
+  <body>
+    <input type="button" onclick="changeTheme()" value="更改主题" />
+    <div class="content">
+      <p class="content-text">测试文本1</p>
+      <p class="content-text">测试文本2</p>
+      <p class="content-text">测试文本3</p>
+      <p class="content-text">测试文本4</p>
+    </div>
+    <script>
+      var flag = true;
+      function changeTheme() {
+        if (flag) {
+          less.modifyVars({
+            "@bg-color": "#000",
+            "@font-color": "#fff"
+          });
+        } else {
+          less.modifyVars({
+            "@bg-color": "#fff",
+            "@font-color": "#000"
+          });
+        }
+        flag = !flag;
+      }
+    </script>
+  </body>
+</html>
