@@ -15,7 +15,10 @@ function App() {
           <MyIcon code="email" />
           <MyIcon code="patent" color="purple" />
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <img src={logo} className="App-logo" alt="logo" />
+          {/* <MyIcon code="icecream" size="256" /> */}
+        </div>
         <ul style={{ textAlign: "left" }}>
           <li>
             less修改变量：
