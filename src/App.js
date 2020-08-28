@@ -1,11 +1,20 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import MyIcon from "./myicon";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* transform: "rotate(10deg)" */}
+        <div className="iconDiv">
+          <MyIcon code="money" />
+          <MyIcon code="pdf" />
+          <MyIcon code="arrow_right" />
+          <MyIcon code="email" />
+          <MyIcon code="patent" color="purple" />
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
         <ul style={{ textAlign: "left" }}>
           <li>

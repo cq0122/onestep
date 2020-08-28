@@ -40,3 +40,7 @@
 a {
   text-decoration: none;
 }
+
+.iconDiv > * {
+  margin-left: 20px;
+}
