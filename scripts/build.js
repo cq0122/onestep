@@ -218,7 +218,7 @@ function cdnFontToLocal() {
   console.log("download font jsfile and replace script src...");
 
   let indexHtml = fs.readFileSync(paths.appHtml);
-  //cheerio（奇瑞欧）的坑find("script")是一个类数组对象
+  //cheerio（奇瑞欧）的坑：find("script")是一个类数组对象
   let indexScript = cheerio.load(indexHtml)("html").find("script");
   Object.keys(indexScript).forEach((item) => {
     if (
