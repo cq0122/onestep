@@ -9,11 +9,12 @@ function App() {
       <header className="App-header">
         {/* transform: "rotate(10deg)" */}
         <div className="iconDiv">
+          <MyIcon code="arrow_left" />
           <MyIcon code="money" />
           <MyIcon code="pdf" />
-          <MyIcon code="arrow_right" />
           <MyIcon code="email" />
           <MyIcon code="patent" color="purple" />
+          <MyIcon code="arrow_right" />
         </div>
         <div>
           <img src={logo} className="App-logo" alt="logo" />
