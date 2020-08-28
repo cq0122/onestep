@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import MyIcon from "./myicon";
+import MyIcon from "./MyIcon";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         {/* transform: "rotate(10deg)" */}
         <div className="iconDiv">
           <MyIcon code="arrow_left" />
+          <MyIcon code="list" />
           <MyIcon code="money" />
           <MyIcon code="pdf" />
           <MyIcon code="email" />
