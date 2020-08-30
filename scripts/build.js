@@ -25,9 +25,7 @@ const formatWebpackMessages = require("react-dev-utils/formatWebpackMessages");
 const printHostingInstructions = require("react-dev-utils/printHostingInstructions");
 const FileSizeReporter = require("react-dev-utils/FileSizeReporter");
 const printBuildError = require("react-dev-utils/printBuildError");
-const cheerio = require("cheerio");
-const wget = require("node-wget");
-const replace = require("replace");
+const withoutCDN = require("without-cdn");
 
 const measureFileSizesBeforeBuild =
   FileSizeReporter.measureFileSizesBeforeBuild;
@@ -85,7 +83,9 @@ checkBrowsers(paths.appPath, isInteractive)
         console.log(chalk.green("Compiled successfully.\n"));
       }
 
-      cdnFontToLocal();
+      // withoutCDN({
+      //   filepath: "build/index.html"
+      // });
 
       console.log("File sizes after gzip:\n");
       printFileSizesAfterBuild(
@@ -212,33 +212,4 @@ function copyPublicFolder() {
     dereference: true,
     filter: (file) => file !== paths.appHtml
   });
-}
-
-function cdnFontToLocal() {
-  console.log("download font jsfile and replace script src...");
-
-  let indexHtml = fs.readFileSync(paths.appHtml);
-  //cheerio（奇瑞欧）的坑：find("script")是一个类数组对象
-  let indexScript = cheerio.load(indexHtml)("html").find("script");
-  Object.keys(indexScript).forEach((item) => {
-    if (
-      indexScript[item].attribs &&
-      indexScript[item].attribs.src &&
-      indexScript[item].attribs.src.startsWith("http://at.alicdn.com/t/font_")
-    ) {
-      console.log("download " + indexScript[item].attribs.src);
-      //wget的坑：dest目录需要以 / 结尾，否则报错不是目录
-      wget({ url: indexScript[item].attribs.src, dest: paths.appBuild + "/" });
-    }
-  });
-
-  replace({
-    regex: 'src="http://at.alicdn.com/t/',
-    replacement: 'src="',
-    paths: [`${paths.appBuild}/index.html`],
-    recursive: true,
-    silent: true
-  });
-
-  console.log(chalk.green("cdnFontToLocal successfully.\n"));
 }
