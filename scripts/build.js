@@ -83,10 +83,6 @@ checkBrowsers(paths.appPath, isInteractive)
         console.log(chalk.green("Compiled successfully.\n"));
       }
 
-      // withoutCDN({
-      //   filepath: "build/index.html"
-      // });
-
       console.log("File sizes after gzip:\n");
       printFileSizesAfterBuild(
         stats,
@@ -108,6 +104,11 @@ checkBrowsers(paths.appPath, isInteractive)
         buildFolder,
         useYarn
       );
+
+      // withoutCDN({
+      //   filepath: "build/index.html",
+      //   folder: "static"
+      // });
     },
     (err) => {
       const tscCompileOnError = process.env.TSC_COMPILE_ON_ERROR === "true";
