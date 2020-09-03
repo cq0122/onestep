@@ -1,11 +1,16 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Icon } from "iconfontcn";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>
+          <Icon code="offer" size="20" color="red" />
+          <Icon code="icecream" size="100" />
+        </div>
         <img src={logo} className="App-logo" alt="logo" />
         <ul style={{ textAlign: "left" }}>
           <li>
