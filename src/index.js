@@ -8,7 +8,12 @@ import * as serviceWorker from "./serviceWorker";
 
 import Iconfont from "iconfontcn";
 
+// Iconfont.config("i", "t-", "testfont");
+
 Iconfont.init("font_2043983_w1m0lhxtor.js", "t-", "testfont");
+
+// Iconfont.init("font_2043983_w1m0lhxtor.css", "t-", "testfont");
+
 // Iconfont.init("//at.alicdn.com/t/font_2043983_w1m0lhxtor.css", "t-", "testfont");
 
 ReactDOM.render(
