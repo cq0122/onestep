@@ -50,7 +50,8 @@ function App() {
         <div className="c2-1">{emoji2}</div>
         <div className="r2">{emoji2}</div>
 
-        <div className="hide-border"></div>
+        {/* <div className="hide-border"></div> */}
+        <div className="l2-c">{emoji2}</div>
         <div className="l2-r">{emoji2}</div>
         <div className="r2-l">{emoji2}</div>
       </div>
