@@ -3,17 +3,6 @@ import "./App.css";
 import { Icon } from "iconfontcn";
 
 function App() {
-  const emoji = (
-    <span>
-      <Icon code="football" size="30" />
-    </span>
-  );
-  const emoji2 = (
-    <React.Fragment>
-      {emoji}
-      {emoji}
-    </React.Fragment>
-  );
   return (
     <div>
       <div className="header">
@@ -26,33 +15,24 @@ function App() {
           cq0122
         </a>
       </div>
-
-      <div className="box">
-        <div className="tl">{emoji}</div>
-        <div className="tc">{emoji}</div>
-        <div className="tr">{emoji}</div>
-
-        <div className="cl">{emoji}</div>
-        <div className="cc">{emoji}</div>
-        <div className="cr">{emoji}</div>
-
-        <div className="bl">{emoji}</div>
-        <div className="bc">{emoji}</div>
-        <div className="br">{emoji}</div>
+      <div className="icon-div">
+        <Icon code="football" />
+        <Icon code="small" />
+        <Icon code="offer" color="red" />
+        <Icon code="icecream" size="40" />
       </div>
 
-      <div className="box">
-        <div className="t2">{emoji2}</div>
-        <div className="c2">{emoji2}</div>
-        <div className="b2">{emoji2}</div>
-
-        <div className="l2">{emoji2}</div>
-        <div className="c2-1">{emoji2}</div>
-        <div className="r2">{emoji2}</div>
-
-        <div className="hide-border"></div>
-        <div className="l2-r">{emoji2}</div>
-        <div className="r2-l">{emoji2}</div>
+      <div className="icon-div">
+        <p>
+          <img src="/img/1.jpg" alt="" height="500" />
+        </p>
+        <p>
+          <img src="/img/2.jpg" alt="" height="500" />
+        </p>
+        <p>
+          index.tsx中调用Iconfont初始化，Iconfont.init("font_2043983_piz5r4nwk6f.css",
+          "t-", "testfont");
+        </p>
       </div>
     </div>
   );
