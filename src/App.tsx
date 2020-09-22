@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import { Icon } from "iconfontcn";
 
 function App() {
   const emoji = (
-    <span role="img" aria-labelledby="panda1">
-      😀
+    <span>
+      <Icon code="football" size="30" />
     </span>
   );
   const emoji2 = (
@@ -16,7 +17,7 @@ function App() {
   return (
     <div>
       <div className="header">
-        <img src="/step.png" alt="" />{" "}
+        <Icon className="logo" code="step" size="30" />
         <a
           href="https://github.com/cq0122"
           target="_blank"

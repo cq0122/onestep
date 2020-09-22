@@ -1,11 +1,31 @@
+@keyframes twinkling {
+  0% {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    -webkit-transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -webkit-transform: scale(1.12);
+  }
+  100% {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    -webkit-transform: scale(1);
+  }
+}
+
 .header {
   display: table-row;
   width: 100vw;
 }
-.header img {
+.header .logo {
   display: table-cell;
   width: 50px;
   padding: 20px;
+  animation: twinkling 2.1s infinite ease-in-out;
+  animation-fill-mode: both;
 }
 .header a {
   display: table-cell;
@@ -24,11 +44,10 @@
   display: inline-flex;
   margin: 15px 0 0 15px;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .box div span {
-  width: 20px;
-  height: 20px;
   text-align: center;
 }
 
