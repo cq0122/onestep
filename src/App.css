@@ -1,46 +1,113 @@
-.App {
+.header {
+  display: table-row;
+  width: 100vw;
+}
+.header img {
+  display: table-cell;
+  width: 50px;
+}
+.header a {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+.box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.box div {
+  border: solid 1px #333;
+  width: 100px;
+  height: 100px;
+  display: inline-flex;
+  margin: 15px 0 0 15px;
+  padding: 10px;
+}
+
+.box div span {
+  width: 20px;
+  height: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box div.hide-border {
+  border: solid 1px #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tl {
+  justify-content: flex-start;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.tc {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.tr {
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.cl {
+  justify-content: flex-start;
+  align-items: center;
+}
+.cc {
+  justify-content: center;
+  align-items: center;
+}
+.cr {
+  justify-content: flex-end;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bl {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.bc {
+  justify-content: center;
+  align-items: flex-end;
+}
+.br {
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-a {
-  text-decoration: none;
+.t2 {
+  justify-content: space-between;
+}
+.r2 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.b2 {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.l2 {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.c2 {
+  justify-content: space-between;
+  align-items: center;
+}
+.c2-1 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.iconDiv > * {
-  margin-left: 20px;
+.l2-r {
+  justify-content: space-between;
+}
+.l2-r > span:nth-child(2) {
+  align-self: flex-end;
+}
+
+.r2-l {
+  justify-content: space-between;
+}
+.r2-l > span:nth-child(1) {
+  align-self: flex-end;
 }
