@@ -5,11 +5,11 @@
 .header img {
   display: table-cell;
   width: 50px;
+  padding: 20px;
 }
 .header a {
   display: table-cell;
   vertical-align: middle;
-  padding: 0 20px;
 }
 
 .box {
