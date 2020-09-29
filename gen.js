@@ -25,8 +25,8 @@ for (let value of gen()) {
 
 console.log("-----------------");
 function* sayFullName() {
-  var firstName = yield;
-  var secondName = yield;
+  let firstName = yield;
+  let secondName = yield;
   console.log(firstName, secondName);
 }
 
